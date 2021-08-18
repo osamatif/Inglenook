@@ -1,0 +1,198 @@
+{
+  "project_info": {
+    "project_number": "380817968403",
+    "project_id": "inglenook-e5595",
+    "storage_bucket": "inglenook-e5595.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380817968403:android:f6965034db08e431871ee6",
+        "android_client_info": {
+          "package_name": "com.example.grocery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380817968403-mc0bnuktktcqdkmpdes306fphacco4jt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCayOqBt0os5yqK4tNDtfOPiqBlXmaq2zM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380817968403-mc0bnuktktcqdkmpdes306fphacco4jt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "380817968403-7kt0noo3c913s8l9d9p27ur5fglv0rvb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inglenook.user"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380817968403:android:4378a80347e7c992871ee6",
+        "android_client_info": {
+          "package_name": "com.example.grocery_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380817968403-mc0bnuktktcqdkmpdes306fphacco4jt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCayOqBt0os5yqK4tNDtfOPiqBlXmaq2zM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380817968403-mc0bnuktktcqdkmpdes306fphacco4jt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "380817968403-7kt0noo3c913s8l9d9p27ur5fglv0rvb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inglenook.user"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380817968403:android:9a861acc7e469981871ee6",
+        "android_client_info": {
+          "package_name": "com.inglenook.grocery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380817968403-mc0bnuktktcqdkmpdes306fphacco4jt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCayOqBt0os5yqK4tNDtfOPiqBlXmaq2zM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380817968403-mc0bnuktktcqdkmpdes306fphacco4jt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "380817968403-7kt0noo3c913s8l9d9p27ur5fglv0rvb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inglenook.user"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380817968403:android:1be2a5997fd2663e871ee6",
+        "android_client_info": {
+          "package_name": "com.inglenook.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380817968403-5shta1dgftb4816vevocoirt621000he.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inglenook.user",
+            "certificate_hash": "a2fa5afa46a8d5bcbb384868e218094bd29e74ad"
+          }
+        },
+        {
+          "client_id": "380817968403-mc0bnuktktcqdkmpdes306fphacco4jt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCayOqBt0os5yqK4tNDtfOPiqBlXmaq2zM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380817968403-mc0bnuktktcqdkmpdes306fphacco4jt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "380817968403-7kt0noo3c913s8l9d9p27ur5fglv0rvb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inglenook.user"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380817968403:android:8ba3d34c0433dbfa871ee6",
+        "android_client_info": {
+          "package_name": "com.slownett.delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380817968403-mc0bnuktktcqdkmpdes306fphacco4jt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCayOqBt0os5yqK4tNDtfOPiqBlXmaq2zM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380817968403-mc0bnuktktcqdkmpdes306fphacco4jt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "380817968403-7kt0noo3c913s8l9d9p27ur5fglv0rvb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inglenook.user"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

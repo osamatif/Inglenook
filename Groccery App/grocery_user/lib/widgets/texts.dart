@@ -65,7 +65,8 @@ class Texts {
   static Text text(String text, Color color,
       {TextAlign alignment = TextAlign.left,
       TextOverflow textOverflow = TextOverflow.visible,
-      int? maxLines}) {
+      int? maxLines,
+      FontWeight fontWeight = FontWeight.w400}) {
     return Text(
       text,
       softWrap: true,
@@ -73,9 +74,9 @@ class Texts {
       maxLines: maxLines,
       textAlign: alignment,
       style: TextStyle(
-          height: 1.1,
+          height: 1.3, // Better line height for readability
           fontFamily: 'Roboto',
-          fontWeight: FontWeight.w400,
+          fontWeight: fontWeight,
           fontSize: 16,
           color: color),
     );

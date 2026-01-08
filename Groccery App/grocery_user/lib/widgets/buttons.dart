@@ -32,22 +32,21 @@ class Buttons {
       child: TextButton(
         onPressed: onPressed,
         child: Padding(
-          padding: EdgeInsets.all(7),
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           child: widget,
         ),
         style: TextButton.styleFrom(
           backgroundColor: (border == true) ? Colors.transparent : color,
-          shape:  RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
+          elevation: 0,
+          shadowColor: Colors.transparent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8), // Shopify-style subtle radius
             side: (border == true)
-                ? BorderSide(color: color, width: 2)
+                ? BorderSide(color: color, width: 1.5)
                 : BorderSide.none,
           )
         ),
-
       )
-
-
     );
   }
 }

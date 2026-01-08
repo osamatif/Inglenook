@@ -23,16 +23,9 @@ class TextFields {
       padding: EdgeInsets.only(left: 10, right: 10),
       decoration: BoxDecoration(
         color: themeModel.secondBackgroundColor,
-        borderRadius: BorderRadius.all(Radius.circular(15)),
+        borderRadius: BorderRadius.all(Radius.circular(8)),
         border: Border.all(
-            width: 2, color: error ? Colors.red : Colors.transparent),
-        /* boxShadow: [
-            BoxShadow(
-                blurRadius: 30,
-                offset: Offset(0,5),
-                color: themeModel.shadowColor
-            )
-          ]*/
+            width: 1, color: error ? Colors.red : themeModel.borderColor),
       ),
       child: TextField(
         enabled: !isLoading,
@@ -71,11 +64,15 @@ class TextFields {
       padding: EdgeInsets.only(left: 10, right: 10),
       decoration: BoxDecoration(
           color: themeModel.secondBackgroundColor,
-          borderRadius: BorderRadius.all(Radius.circular(15)),
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+          border: Border.all(
+            color: themeModel.borderColor,
+            width: 1,
+          ),
           boxShadow: [
             BoxShadow(
-                blurRadius: 5,
-                offset: Offset(0, 5),
+                blurRadius: 4,
+                offset: Offset(0, 2),
                 color: themeModel.shadowColor)
           ]),
       child: TextField(
@@ -113,10 +110,10 @@ class TextFields {
           ),
       decoration: BoxDecoration(
           color: themeModel.secondBackgroundColor,
-          borderRadius: BorderRadius.all(Radius.circular(15)),
+          borderRadius: BorderRadius.all(Radius.circular(8)),
           border: Border.all(
-              color: (error) ? Colors.red : themeModel.secondBackgroundColor,
-              width: 2)),
+              color: (error) ? Colors.red : themeModel.borderColor,
+              width: 1)),
       padding: EdgeInsets.all(10),
       child: TextField(
         enabled: enabled,

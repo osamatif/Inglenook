@@ -16,9 +16,9 @@ class Dialogs {
       backgroundColor: Colors.transparent,
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(15)),
-            color: themeModel.backgroundColor),
-        padding: EdgeInsets.all(20),
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+            color: themeModel.secondBackgroundColor),
+        padding: EdgeInsets.all(24),
         child: Wrap(
           children: [
             Align(
@@ -59,9 +59,9 @@ class Dialogs {
       backgroundColor: Colors.transparent,
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(15)),
-            color: themeModel.backgroundColor),
-        padding: EdgeInsets.all(20),
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+            color: themeModel.secondBackgroundColor),
+        padding: EdgeInsets.all(24),
         child: Wrap(
           children: [
             Align(
@@ -102,9 +102,9 @@ class Dialogs {
       backgroundColor: Colors.transparent,
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(15)),
-            color: themeModel.backgroundColor),
-        padding: EdgeInsets.all(20),
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+            color: themeModel.secondBackgroundColor),
+        padding: EdgeInsets.all(24),
         child: Wrap(
           children: [
             Align(

@@ -25,38 +25,46 @@ class Cards {
       required void Function() onTap}) {
     return GestureDetector(
       child: Container(
-        margin: EdgeInsets.all(6),
+        margin: EdgeInsets.all(8),
         decoration: BoxDecoration(
             color: themeModel.secondBackgroundColor,
-            borderRadius: BorderRadius.all(Radius.circular(15)),
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+            border: Border.all(
+              color: themeModel.borderColor,
+              width: 1,
+            ),
             boxShadow: [
               BoxShadow(
-                  blurRadius: 2,
-                  offset: Offset(0, 5),
+                  blurRadius: 4,
+                  offset: Offset(0, 2),
                   color: themeModel.shadowColor)
             ]),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Hero(
-                tag: product.reference,
-                child: FadeInImage(
-                  height: (width * 0.5) / (width ~/ 180),
-                  image: NetworkImage(product.image),
-                  placeholder: MemoryImage(kTransparentImage),
-                )),
             Padding(
-              padding: EdgeInsets.only(top: 10),
-              child: Texts.text(product.title, themeModel.textColor,
-                  textOverflow: TextOverflow.ellipsis, maxLines: 1),
+              padding: EdgeInsets.all(12),
+              child: Hero(
+                  tag: product.reference,
+                  child: FadeInImage(
+                    height: (width * 0.5) / (width ~/ 180),
+                    image: NetworkImage(product.image),
+                    placeholder: MemoryImage(kTransparentImage),
+                  )),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 10),
+              padding: EdgeInsets.symmetric(horizontal: 12),
+              child: Texts.text(product.title, themeModel.textColor,
+                  textOverflow: TextOverflow.ellipsis, maxLines: 2),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 8, bottom: 12, left: 12, right: 12),
               child: GestureDetector(
                 child: Texts.text(
-                    "${(product.pricePerKg == null) ? product.pricePerPiece : product.pricePerKg}\$",
-                    themeModel.priceColor),
+                    "\$${(product.pricePerKg == null) ? product.pricePerPiece : product.pricePerKg}",
+                    themeModel.priceColor,
+                    fontWeight: FontWeight.w600),
                 onTap: () {},
               ),
             ),
@@ -79,10 +87,20 @@ class Cards {
       },
       child: Container(
         decoration: BoxDecoration(
-          color: themeModel.shadowColor,
-          borderRadius: BorderRadius.all(Radius.circular(15)),
+          color: themeModel.secondBackgroundColor,
+          borderRadius: BorderRadius.all(Radius.circular(12)),
+          border: Border.all(
+            color: themeModel.borderColor,
+            width: 1,
+          ),
+          boxShadow: [
+            BoxShadow(
+                blurRadius: 4,
+                offset: Offset(0, 2),
+                color: themeModel.shadowColor)
+          ],
         ),
-        margin: EdgeInsets.only(right: 20),
+        margin: EdgeInsets.only(right: 16),
         width: 180,
         height: 180,
         child: Column(
@@ -96,11 +114,12 @@ class Cards {
               image: NetworkImage(category.image),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 10, bottom: 10),
+              padding: EdgeInsets.only(top: 12, bottom: 12),
               child: Texts.text(
                   category.title.replaceFirst(
                       category.title[0], category.title[0].toUpperCase()),
-                  themeModel.textColor),
+                  themeModel.textColor,
+                  fontWeight: FontWeight.w500),
             )
           ],
         ),
@@ -120,15 +139,19 @@ class Cards {
     return Container(
       decoration: BoxDecoration(
           color: themeModel.secondBackgroundColor,
-          borderRadius: BorderRadius.all(Radius.circular(15)),
+          borderRadius: BorderRadius.all(Radius.circular(12)),
+          border: Border.all(
+            color: themeModel.borderColor,
+            width: 1,
+          ),
           boxShadow: [
             BoxShadow(
-                blurRadius: 2,
-                offset: Offset(0, 5),
+                blurRadius: 4,
+                offset: Offset(0, 2),
                 color: themeModel.shadowColor)
           ]),
       //  padding: EdgeInsets.all(20),
-      margin: EdgeInsets.only(bottom: 10),
+      margin: EdgeInsets.only(bottom: 12),
       child: GestureDetector(
         onTap: goToProduct,
         child: Container(
@@ -254,8 +277,8 @@ class Cards {
                                 return Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(15),
-                                        topRight: Radius.circular(15),
+                                        topLeft: Radius.circular(12),
+                                        topRight: Radius.circular(12),
                                       ),
                                       color: themeModel.theme.backgroundColor),
                                   padding: EdgeInsets.all(20),
@@ -325,26 +348,36 @@ class Cards {
     return Container(
       decoration: BoxDecoration(
           color: themeModel.secondBackgroundColor,
-          borderRadius: BorderRadius.all(Radius.circular(15))),
+          borderRadius: BorderRadius.all(Radius.circular(12)),
+          border: Border.all(
+            color: themeModel.borderColor,
+            width: 1,
+          ),
+          boxShadow: [
+            BoxShadow(
+                blurRadius: 4,
+                offset: Offset(0, 2),
+                color: themeModel.shadowColor)
+          ]),
       margin: EdgeInsets.only(
-        bottom: 10,
+        bottom: 12,
         left: 20,
         right: 20,
       ),
       //   padding: EdgeInsets.all(20),
       child: ListTile(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(15)),
+          borderRadius: BorderRadius.all(Radius.circular(12)),
         ),
         onTap: onTap,
         leading: Icon(
           iconData,
           color: themeModel.accentColor,
         ),
-        title: Texts.text(title, themeModel.textColor),
+        title: Texts.text(title, themeModel.textColor, fontWeight: FontWeight.w500),
         trailing: Icon(
           Icons.navigate_next,
-          color: themeModel.textColor,
+          color: themeModel.secondTextColor,
         ),
       ),
     );
@@ -359,14 +392,18 @@ class Cards {
 
     return GestureDetector(
       child: Container(
-        margin: EdgeInsets.only(top: 10),
+        margin: EdgeInsets.only(top: 12),
         decoration: BoxDecoration(
             color: themeModel.secondBackgroundColor,
-            borderRadius: BorderRadius.all(Radius.circular(15)),
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+            border: Border.all(
+              color: themeModel.borderColor,
+              width: 1,
+            ),
             boxShadow: [
               BoxShadow(
-                  blurRadius: 2,
-                  offset: Offset(0, 5),
+                  blurRadius: 4,
+                  offset: Offset(0, 2),
                   color: themeModel.shadowColor)
             ]),
         child: Stack(
@@ -422,8 +459,8 @@ class Cards {
                         return Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(15),
-                                topRight: Radius.circular(15),
+                                topLeft: Radius.circular(12),
+                                topRight: Radius.circular(12),
                               ),
                               color: themeModel.theme.backgroundColor),
                           padding: EdgeInsets.all(20),

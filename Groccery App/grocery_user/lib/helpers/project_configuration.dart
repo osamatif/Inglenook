@@ -1,15 +1,15 @@
+import 'package:grocery/config/environment.dart';
+import 'package:grocery/config/secrets.dart';
+
 class ProjectConfiguration {
-  //TODO: set your logo path
-  static final String logo = "images/logopng";
+  // Logo path
+  static final String logo = "images/logo.png";
 
-  //TODO: Add your notifications API
-  static final notificationsApi = "";
-
-  ///TODO: Add your Stripe Api
-  static final stripePaymentApi = "";
-
-  static final String stripePublishableKey = "";
-  static final String stripeMerchantId = "Test";
+  // Use secrets for sensitive configuration
+  static String get notificationsApi => Secrets.notificationsApi;
+  static String get stripePaymentApi => Secrets.paymentApiUrl;
+  static String get stripePublishableKey => Secrets.stripePublishableKey;
+  static String get stripeMerchantId => Secrets.stripeMerchantId;
 
   static final List<String> pngImages = [
     "images/logo.png",

@@ -1,3 +1,6 @@
+import 'package:delivery/config/environment.dart';
+import 'package:delivery/config/secrets.dart';
+
 class ProjectConfiguration {
   static final List<String> svgImages = [
     'images/empty_cart.svg',
@@ -17,6 +20,11 @@ class ProjectConfiguration {
 
   static final String logo = 'images/logo.png';
 
-  ///Notifications API
-  static final notificationsApi = "";
+  // Use secrets for sensitive configuration
+  static String get notificationsApi => Secrets.notificationsApi;
+
+  // Application settings from environment
+  static String get appName => Environment.appName;
+  static String get appVersion => Environment.appVersion;
+  static int get defaultPageSize => Environment.defaultPageSize;
 }

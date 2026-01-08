@@ -1,3 +1,6 @@
+import 'package:grocery_admin/config/environment.dart';
+import 'package:grocery_admin/config/secrets.dart';
+
 class ProjectConfiguration {
   static final List<String> svgImages = [
     'images/empty_cart.svg',
@@ -20,5 +23,11 @@ class ProjectConfiguration {
 
   static final String logo = 'images/logo.png';
 
-  static final notificationsApi ="";
+  // Use secrets configuration for sensitive data
+  static String get notificationsApi => Secrets.notificationsApi;
+
+  // Application settings from environment
+  static String get appName => Environment.appName;
+  static String get appVersion => Environment.appVersion;
+  static int get defaultPageSize => Environment.defaultPageSize;
 }

@@ -1,24 +1,48 @@
 import 'package:http/http.dart' as http;
+import 'package:delivery/config/secrets.dart';
 
+/// CRITICAL SECURITY WARNING:
+/// This class should NOT exist in the client-side application!
+/// Payment processing with secret keys MUST be done on a secure backend server.
+///
+/// Current implementation is a SECURITY VULNERABILITY.
+///
+/// Recommended Architecture:
+/// 1. Client sends payment request to YOUR secure backend API
+/// 2. Backend validates the order and amount
+/// 3. Backend calls Yoco API with secret key (stored securely on server)
+/// 4. Backend returns result to client
+///
+/// TODO: Remove this class and implement proper backend payment processing
+
+@Deprecated('SECURITY RISK: Move payment processing to secure backend')
 class YocoPayment {
-  String requestUrl = 'https://online.yoco.com/v1/charges/';
-  String secretKey = 'sk_test_b7b8f911xJoJ7Zz8a604ccf9ea3a'; // Test Secret Key
+  // WARNING: This should be a backend endpoint, not direct Yoco URL
+  final String backendPaymentUrl = Secrets.paymentApiUrl;
 
-  Future getDataFromYoco() async {
-    final response = await http.post(Uri.parse(requestUrl), headers: {
-      'X-Auth-Secret-Key': secretKey,
-    }, body: {
-      'token': 'tok_test_DjaqoUgmzwYkwesr3euMxyUV4g',
-      'amountInCents': "2799",
-      'currency': 'ZAR',
-    });
-    print("Data from the API: ${response.body}");
+  /// DEPRECATED: Do not use this method
+  /// Payment processing must be done server-side
+  @Deprecated('SECURITY RISK: This exposes payment logic client-side')
+  Future<void> processPayment({
+    required String orderId,
+    required int amountInCents,
+    required String currency,
+  }) async {
+    // This method should call YOUR backend API instead
+    // Example:
+    // final response = await http.post(
+    //   Uri.parse(backendPaymentUrl),
+    //   headers: {'Content-Type': 'application/json'},
+    //   body: jsonEncode({
+    //     'orderId': orderId,
+    //     'amountInCents': amountInCents,
+    //     'currency': currency,
+    //   }),
+    // );
+
+    throw UnimplementedError(
+      'Payment processing must be implemented on secure backend. '
+      'Never process payments with secret keys in client-side code.'
+    );
   }
-
-  // Future getDataViaDio() async {
-  // var dio = Dio();
-  // var response = await dio.get(requestUrl, queryParameters: {
-//
-  // },options: Options(body:));
-  // }
 }

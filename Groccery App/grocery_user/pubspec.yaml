@@ -18,33 +18,61 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.5.0
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  cloud_firestore: ^2.4.0
-  country_code_picker: ^2.0.2
-  cupertino_icons: ^1.0.2
-  decimal: ^1.2.0
-  file_picker: ^3.0.2+2
-  firebase_auth: ^3.0.1
-  firebase_core: ^1.4.0
-  firebase_messaging: ^10.0.2
-  firebase_storage: ^10.0.1
-  flutter_facebook_auth: ^3.4.1
-  flutter_local_notifications: ^6.0.0
-  flutter_native_image: ^0.0.6
-  flutter_native_splash: ^1.2.0
-  flutter_svg: ^0.22.0
-  fluttertoast: ^8.0.7
-  font_awesome_flutter: ^9.1.0
-  google_sign_in: ^5.0.4
-  http: ^0.13.3
-  provider: ^5.0.0
-  rxdart: ^0.27.1
-  shared_preferences: ^2.0.6
-  stripe_payment: ^1.1.1
+
+  # Firebase - Updated to latest stable versions
+  cloud_firestore: ^4.13.6
+  firebase_auth: ^4.15.3
+  firebase_core: ^2.24.2
+  firebase_messaging: ^14.7.9
+  firebase_storage: ^11.5.6
+
+  # UI & Icons
+  cupertino_icons: ^1.0.6
+  flutter_svg: ^2.0.9
+  font_awesome_flutter: ^10.6.0
+
+  # Country & Localization
+  country_code_picker: ^3.0.0
+
+  # File handling
+  file_picker: ^6.1.1
+  flutter_native_image: ^0.0.6+1
+
+  # Notifications
+  flutter_local_notifications: ^16.3.0
+
+  # Splash screen
+  flutter_native_splash: ^2.3.9
+
+  # UI Components
+  fluttertoast: ^8.2.4
+
+  # Utilities
+  decimal: ^2.3.3
+
+  # Social Authentication
+  flutter_facebook_auth: ^6.0.4
+  google_sign_in: ^6.2.1
+
+  # Payments - IMPORTANT: Migrate to flutter_stripe (official package)
+  # stripe_payment is deprecated - use flutter_stripe instead
+  flutter_stripe: ^10.1.1
+  # BREAKING CHANGE: You'll need to update payment code to use flutter_stripe API
+
+  # Networking
+  http: ^1.1.2
+
+  # State Management
+  provider: ^6.1.1
+  rxdart: ^0.27.7
+
+  # Storage
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
